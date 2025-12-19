@@ -1,0 +1,186 @@
+.youtubeGrid {
+  margin: 2rem 0;
+}
+
+.gridTitle {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--ifm-heading-color);
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  margin: 0 auto;
+}
+
+.grid2Cols {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  max-width: 800px;
+}
+
+.grid3Cols {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  max-width: 1000px;
+}
+
+.grid4Cols {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  max-width: 1200px;
+}
+
+.videoCard {
+  background: var(--ifm-card-background-color);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.videoCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.videoThumbnail {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: #000;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.videoCard:hover .thumbnail {
+  transform: scale(1.05);
+}
+
+.playButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
+  cursor: pointer;
+}
+
+.videoCard:hover .playButton {
+  opacity: 1;
+}
+
+.playButton svg {
+  width: 68px;
+  height: 48px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.duration {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.videoInfo {
+  padding: 1.25rem;
+}
+
+.videoTitle {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.videoLink {
+  color: var(--ifm-heading-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.videoLink:hover {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+.videoDescription {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--ifm-color-content-secondary);
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .grid2Cols,
+  .grid3Cols,
+  .grid4Cols {
+    max-width: 100%;
+  }
+  
+  .videoThumbnail {
+    height: 180px;
+  }
+  
+  .playButton svg {
+    width: 48px;
+    height: 36px;
+  }
+  
+  .gridTitle {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .videoThumbnail {
+    height: 160px;
+  }
+  
+  .videoInfo {
+    padding: 1rem;
+  }
+  
+  .videoTitle {
+    font-size: 1rem;
+  }
+  
+  .videoDescription {
+    font-size: 0.85rem;
+  }
+}
+
+/* Dark mode adjustments */
+[data-theme='dark'] .videoCard {
+  background: var(--ifm-background-color);
+  border-color: var(--ifm-color-emphasis-300);
+}
+
+[data-theme='dark'] .videoCard:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+

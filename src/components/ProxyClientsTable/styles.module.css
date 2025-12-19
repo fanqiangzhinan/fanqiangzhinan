@@ -1,0 +1,301 @@
+.tableContainer {
+  overflow-x: auto;
+  margin: 2rem 0;
+}
+
+.proxyTable {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--ifm-background-color);
+  font-size: 14px;
+}
+
+.proxyTable thead {
+  background: var(--ifm-color-emphasis-100);
+}
+
+.proxyTable th {
+  padding: 1rem 0.75rem;
+  text-align: center;
+  font-weight: 600;
+  color: var(--ifm-heading-color);
+  border-bottom: 2px solid var(--ifm-color-emphasis-200);
+  white-space: nowrap;
+}
+
+.proxyTable td {
+  padding: 1rem 0.75rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-100);
+  vertical-align: middle;
+  text-align: center;
+}
+
+
+/* Column specific styles */
+.iconColumn {
+  width: 60px;
+  text-align: center;
+}
+
+.nameColumn {
+  min-width: 200px;
+}
+
+.platformsColumn {
+  min-width: 150px;
+}
+
+.priceColumn {
+  width: 130px;
+  text-align: center;
+}
+
+.opensourceColumn {
+  width: 120px;
+  text-align: center;
+}
+
+/* Icon cell */
+.iconCell {
+  text-align: center;
+}
+
+.clientIcon {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clientIcon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.clientIcon img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Name cell */
+.nameCell {
+  min-width: 200px;
+}
+
+.clientName {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.clientLink {
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.clientLink:hover {
+  color: var(--ifm-color-primary-dark);
+  text-decoration: underline;
+}
+
+.clientDescription {
+  font-size: 12px;
+  color: var(--ifm-color-content-secondary);
+  line-height: 1.4;
+}
+
+/* Platform list */
+.platformsCell {
+  min-width: 150px;
+}
+
+.platformList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.platformItem {
+  background: var(--ifm-color-emphasis-200);
+  color: var(--ifm-color-content);
+  padding: 2px 8px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  border: 1px solid var(--ifm-color-emphasis-300);
+}
+
+/* Price cell */
+.priceCell {
+  text-align: center;
+}
+
+.price {
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+}
+
+/* Open source cell */
+.opensourceCell {
+  text-align: center;
+}
+
+.openSourceContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.openSource {
+  background: #28a745;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.closedSource {
+  background: #6c757d;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.partOpenSource {
+  background: #007bff;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.uiOpenSource {
+  background: #c300ff;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.githubLink {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  font-size: 16px;
+  transition: color 0.2s ease;
+}
+
+.githubLink:hover {
+  color: var(--ifm-color-primary-dark);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .tableContainer {
+    margin: 1rem 0;
+    border-radius: 8px;
+  }
+  
+  .proxyTable {
+    font-size: 13px;
+  }
+  
+  .proxyTable th,
+  .proxyTable td {
+    padding: 0.75rem 0.5rem;
+  }
+  
+  .clientIcon {
+    font-size: 20px;
+  }
+  
+  .clientLink {
+    font-size: 14px;
+  }
+  
+  .clientDescription {
+    font-size: 11px;
+  }
+  
+  .platformList {
+    gap: 4px;
+  }
+  
+  .platformItem {
+    font-size: 11px;
+    padding: 1px 6px;
+  }
+  
+  .openSource,
+  .closedSource {
+    font-size: 10px;
+    padding: 1px 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .proxyTable {
+    font-size: 12px;
+  }
+  
+  .proxyTable th,
+  .proxyTable td {
+    padding: 0.5rem 0.25rem;
+  }
+  
+  .nameColumn {
+    min-width: 150px;
+  }
+  
+  .platformsColumn {
+    min-width: 120px;
+  }
+  
+  .clientIcon {
+    font-size: 18px;
+  }
+  
+  .clientLink {
+    font-size: 13px;
+  }
+  
+  .clientDescription {
+    font-size: 10px;
+  }
+  
+  .platformItem {
+    font-size: 10px;
+    padding: 1px 4px;
+  }
+}
+
+/* Dark mode adjustments */
+[data-theme='dark'] .tableContainer {
+  border-color: var(--ifm-color-emphasis-300);
+}
+
+[data-theme='dark'] .proxyTable thead {
+  background: var(--ifm-color-emphasis-200);
+}
+
+[data-theme='dark'] .platformItem {
+  background: var(--ifm-color-emphasis-300);
+  color: var(--ifm-color-content);
+  border-color: var(--ifm-color-emphasis-400);
+}
+
