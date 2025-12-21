@@ -2,7 +2,6 @@
 
 [![Docusaurus](https://img.shields.io/badge/Built%20with-Docusaurus-3ECC5F.svg)](https://docusaurus.io/)
 [![Node](https://img.shields.io/badge/Node-%3E%3D18.0-brightgreen.svg)](https://nodejs.org/)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 > 小白翻墙指南：客户端、VPN、机场、自建代理服务器完整教程，帮助您安全稳定地访问国外网站
 
